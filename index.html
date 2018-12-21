@@ -1,0 +1,62 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Telepathy</title>
+  <link href="tailwind.min.css" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body class="bg-grey-lighter" style="background: linear-gradient(120deg, #d43f8d 0%, #0250c5 100%)">
+
+      <div class="absolute pin-x pin-t">
+        <div class="max-w-sm mx-auto flex py-6 px-3">
+          <div class="opacity-75 flex-1 font-bold text-4xl text-white">
+            Telepathy
+          </div>
+          <div class="text-right flex-1">
+            <a href="#about" class="inline-block no-underline px-8 py-3 leading-none border rounded-lg text-white border-white hover:underline">About</a>
+          </div>
+        </div>
+      </div>
+  
+  <div class="container mx-auto px-3 py-8 flex items-center h-screen max-w-sm">
+    <div class="flex-1">
+      <div class="flex-1 w-full text-grey-darkest text-center bg-white px-4 py-6 rounded-lg shadow-md mt-16">
+        <p id='type_title' class="text-3xl leading-tight"></p> <!--Type title-->
+        <p id='type_description' class="leading-normal mt-1 mb-8 h-12 text-grey-dark"></p><!--Type description-->
+        <p id='challenge' class="text-4xl leading-tight h-32"></p><!--Challenge-->
+      </div>
+      <div class="flex-1 text-center px-4 py-6">
+        <button type="button" class="bg-pink-dark hover:bg-pink text-white font-bold py-4 w-48 rounded-full" onclick="updateCards()">New card</button>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="bg-white">
+
+    <div class="text-grey-darker mx-auto max-w-md px-4 pt-4 pb-10 leading-normal">
+
+      <h1 id="about" class="text-center pt-4 pb-2 font-normal text-4xl text-grey-darkest leading-tight">The hilarious hands-free party game</h1>
+
+      <p class="py-2">Phones and hands not required (apart from one). The perfect parlour game for when you're all together in the car, busy preparing a big meal, or sat around the dinner table. Read the card aloud and try to all shout the same answer at the same time.</p>
+
+      <h1 class="text-center pt-4 pb-2 font-normal text-4xl text-grey-darkest">How to play</h1>
+      <ol class="py-1 pl-4">
+        <li class="py-1"><b>Read:</b> Read the category and challenge aloud.</li>
+        <li class="py-1"><b>Shout:</b> One person counts down aloud (3, 2, 1) and then everyone shouts their answer. If they are all the same the group wins.</li> 
+        <li class="py-1"><b>Share (optional):</b> Why did they answer that way?</li>
+      </ol>
+      <p class="py-2">For 2-10 players.</p>
+
+      <p class="pt-8 text-sm">Made by <a class="text-blue-dark" href="http://twitter.com/robjones">@robjones</a> for Christmas 2018.</p>
+
+    </div>
+
+  </div>
+
+</body>
+<script src="js.js"></script>
+</html>
