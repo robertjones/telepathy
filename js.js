@@ -270,8 +270,26 @@ const types = {'most likely': {'title': 'Most Likely Person', 'description': "Na
          'top of mind': {'title': 'Top of Mind', 'description': "Which thing of this kind is collectively the first that comes to mind?"},
          'a or b': {'title': 'A or B', 'description': "As a group, we unanimously choose which of the following?"}};
 const rand = n => Math.floor(Math.random()*n);
+function shuffle(array) {
+  var m = array.length, t, i;
+
+  // While there remain elements to shuffle…
+  while (m) {
+
+    // Pick a remaining element…
+    i = Math.floor(Math.random() * m--);
+
+    // And swap it with the current element.
+    t = array[m];
+    array[m] = array[i];
+    array[i] = t;
+  }
+
+  return array;
+};
+var shuffledCards = shuffle(cards);
 const updateCards = function(){
-  var card = cards[rand(cards.length)];
+  var card = shuffledCards.pop();
   document.querySelector('#type_title').innerHTML = types[card.type].title;
   document.querySelector('#type_description').innerHTML = types[card.type].description;
   document.querySelector('#challenge').innerHTML = card.challenge;
